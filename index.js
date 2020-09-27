@@ -2,6 +2,6 @@ function init(){
 
 }
 $(document).ready(function(){
-    console.log("ok");
+    $('#pokemon_table').dataTable();
 });
 init();
