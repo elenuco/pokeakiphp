@@ -3,11 +3,12 @@
   $pokemon= new Pokemon();
   switch($_GET["op"]){
    case "listar":
-    $datos=$pokemon->get_pokemon_x_id();
+    $datos=$pokemon->get_pokemon();
     $data=Array();
     foreach($datos['results'] as $row){
+      $datos2= $pokemon->get_pokemon_x_id($row["url"]);
        $sub_array= array();
-       $sub_array[]='<img src=" " class="img-thumbnail">';
+       $sub_array[]='<img src="'.$datos2.'" class="img-thumbnail">';
        $sub_array[]=$row['name'];
        $sub_array[]=$row['url'];
        $data[]=$sub_array;
