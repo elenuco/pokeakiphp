@@ -11,7 +11,7 @@
        $sub_array= array();
        $sub_array[]='<img src="'.$datos2["image"].'" class="img-thumbnail">';
        $sub_array[]=$row['name'];
-       $sub_array[]=$datos2['numero'];
+       $sub_array[]='<a href="pokemon.php?numero='.$datos2['numero'].'">'.$datos2['numero'].'</a>';
        $data[]=$sub_array;
     }
     $results= array(
