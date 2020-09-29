@@ -10,7 +10,8 @@ class Pokemon{
     public function get_pokemon_x_id($url){
         $json= file_get_contents($url);
         $array=json_decode($json,true);
-        return $array['sprites']["front_default"];
+        return array ( "image"=>$array['sprites']["front_default"],
+         "numero"=>$array['id']);
     }
 }
 ?>
